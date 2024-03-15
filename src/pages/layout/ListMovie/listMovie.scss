@@ -1,0 +1,102 @@
+.listMovie {
+  position: relative;
+  .slick-next {
+    // background-color: trasp;
+    width: 50px;
+    height: 50px;
+    right: 10px;
+    color: orange;
+    font-size: 50px;
+    &::before {
+      display: none;
+    }
+  }
+  .slick-prev {
+    left: 10px;
+    color: orange;
+    font-size: 50px;
+    z-index: 2;
+    &::before {
+      display: none;
+    }
+  }
+  .slick-next,
+  .slick-prev {
+    transition: all 0.3 ease;
+  }
+  .fa-chevron-right:hover,
+  .fa-chevron-left:hover {
+    color: green;
+    opacity: 0.6;
+  }
+  .carousel_banner .movie_item {
+    position: relative;
+    transition: all 1 ease;
+    .click-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      z-index: 5;
+      &::before {
+        display: none;
+      }
+      display: none;
+    }
+  }
+  .dat-ve {
+    width: 400px;
+    height: 85px;
+    background: #fb4226;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .order {
+    display: none;
+  }
+  .movie_item:hover .click-play,
+  .movie_item:hover .order {
+    display: inline;
+  }
+  .movie_item:hover .blur {
+    width: 100%;
+    height: 350px;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    // z-index: 10;
+    position: absolute;
+  }
+  .movie_item:hover .describe {
+    display: none;
+  }
+  .fa-circle-play {
+    font-size: 80px;
+    width: 100px;
+    height: 100px;
+    color: white;
+  }
+  .modal-video-movie-wrap {
+    position: absolute;
+    background-color: rgba($color: #00000052, $alpha: 0.9);
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 8;
+    &::before {
+      display: none;
+    }
+  }
+  iframe {
+    /* Định dạng kích thước và vị trí của iframe */
+    width: 700px; /* Định dạng chiều rộng */
+    height: 450px; /* Định dạng chiều cao */
+    position: absolute; /* Định dạng vị trí */
+    top: 50%; /* Định dạng vị trí */
+    left: 50%; /* Định dạng vị trí */
+    transform: translate(-50%, -50%);
+  }
+}

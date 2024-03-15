@@ -1,0 +1,87 @@
+.carousel_banner {
+  position: relative;
+  .slick-next {
+    // background-color: trasp;
+    width: 50px;
+    height: 50px;
+    right: 30px;
+    color: white;
+    font-size: 50px;
+    &::before {
+      display: none;
+    }
+  }
+  .slick-prev {
+    left: 30px;
+    color: white;
+    font-size: 50px;
+    z-index: 2;
+    &::before {
+      display: none;
+    }
+  }
+  .slick-next,
+  .slick-prev {
+    transition: all 0.3 ease;
+  }
+  .fa-chevron-right:hover,
+  .fa-chevron-left:hover {
+    color: white;
+    opacity: 0.6;
+  }
+  .movie_item {
+    transform: translate(all 0.5 ease);
+  }
+  .click-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    z-index: 5;
+    &::before {
+      display: none;
+    }
+    display: none;
+  }
+  .text-center {
+    position: relative;
+    width: 100%;
+    // height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .h-screen-70:hover .click-play {
+    display: inline;
+  }
+  .fa-circle-play {
+    font-size: 80px;
+    width: 100px;
+    height: 100px;
+    color: white;
+  }
+  .modal-video-movie-wrap {
+    position: absolute;
+    background-color: rgba($color: #00000052, $alpha: 0.9);
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 8;
+    &::before {
+      display: none;
+    }
+  }
+  iframe {
+    /* Định dạng kích thước và vị trí của iframe */
+    width: 700px; /* Định dạng chiều rộng */
+    height: 450px; /* Định dạng chiều cao */
+    position: absolute; /* Định dạng vị trí */
+    top: 50%; /* Định dạng vị trí */
+    left: 50%; /* Định dạng vị trí */
+    transform: translate(-50%, -50%);
+  }
+}
